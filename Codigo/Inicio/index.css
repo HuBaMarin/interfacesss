@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: local('Helvetica'), url('../Fuentes/Helvetica.woff') format('woff');
+}
+ *{
+    font-family:'Helvetica'
+ }
+
+body {
+    background-color: white;
+}
+#nav {
+   /*center nav center elements and a gap 3 between them*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 30vw;
+    margin: auto;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    
+   
+}
+
+#footerpag {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   height: 10vh;
+   width: 30vw;
+   margin: auto;
+   position: relative;
+   bottom: 0;
+   left: 0;
+   right: 0;
+
+}
+
+.texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 89vh;
+    text-align: center;
+    width: 50vw;
+    margin: 0 auto;
+
+}
+
+.texto p {
+    margin: 0;
+    padding: 0;
+    font-size: min(max(1rem, 4vw), 20px);
+    font-weight: bold;
+    word-wrap: break-word;
+    text-align: justify;
+    color: black;
+
+}
+
+.degradado{
+    background: linear-gradient(to bottom, black, grey);
+    transition: 0.2s ease-in-out;
+    width: 100vw;
+    height: 1.2vh;
+    border-radius: 5%;
+}

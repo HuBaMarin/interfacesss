@@ -1,0 +1,149 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: local('Helvetica'), url('../Fuentes/Helvetica.woff') format('woff');
+}
+
+*{
+    font-family:'Helvetica'
+}
+
+body {
+    background-color: white;
+}
+
+
+#nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 30vw;
+    margin: auto;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+#footerpag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 30vw;
+    margin: auto;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top:2rem;
+}
+
+/*put form in center, separate elements by 1vw gap and glow animation border on inputs*/
+form {
+    top: 3rem;
+    margin: auto;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    word-wrap: break-word;
+    text-align: justify;
+    color: white;
+    font-weight: bold;
+  bottom: 3rem;
+}
+
+form input:not([type='submit']) {
+    display: flex;
+    width: 35vw;
+    height: 2vw;
+}
+
+textarea{
+    display: flex;
+    width: 35vw;
+    height: 20vw;
+}
+
+label{
+    color: black;
+}
+
+
+input[type="text"], input[type="email"], textarea {
+    padding: 2vh;
+    margin: auto;
+    background:none;
+    border: 2px solid black;
+    font-size: min(max(1rem, 4vw), 16px);
+    font-weight: bold;
+
+    color: black;
+}
+
+
+
+input[type="text"]:hover::after, input[type="email"]:hover::after, textarea:hover::after {
+    width: 100%;
+}
+
+input[type="text"]::after, input[type="email"]::after, textarea::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width .3s;
+}
+
+
+input[type="submit"]  {
+
+    padding: 2vh;
+    color: black;
+    margin: auto;
+    background:none;
+    border: none;
+    font-size: x-large;
+    font-weight: bold;
+
+}
+
+input[type="submit"]:hover {
+    /*background: linear-gradient(left, #f857a6, #ff8c7f);*/
+    background-color: transparent;
+    color: #ff8c7f;
+}
+
+input[type="submit"]::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff8c7f;
+    transition: width .3s;
+}
+
+input:not([type="submit"]) {
+   font-size: x-large;
+}
+
+textarea {
+    font-size: x-large;
+}
+
+.degradado{
+    position: relative;
+    top: 2rem;
+    background: linear-gradient(to right, black, grey);
+    transition: 0.2s ease-in-out;
+    width: 100vw;
+    height: 1.2vh;
+    border-radius: 5%;
+}

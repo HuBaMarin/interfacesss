@@ -1,0 +1,78 @@
+
+@font-face {
+    font-family: 'Helvetica';
+    src: local('Helvetica'), url('../../Fuentes/Helvetica.woff') format('woff');
+}
+
+* {
+    font-family:'Helvetica'
+}
+
+body {
+    background-color: white;
+}
+#nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 15vw;
+    margin: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#footerpag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    bottom: 0;
+    color: #707070;
+    position: relative;
+    font-size: x-large;
+    width:37vw;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+}
+
+article {
+    position: relative;
+    top: 4rem;
+    display: grid;
+    grid-gap: 0.5rem;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    width: 70vw;
+    height: 58vh;
+    
+    margin-left: auto;
+    margin-right: auto;
+
+}
+/*imagen cambio cámara*/
+/*https://wd40.es/tutoriales/como-cambiar-camara-bici/*/
+article div {
+    width: 60%;
+    height: auto;
+}
+
+article img {
+    width: 100%;
+    height: 15vh;
+    object-fit: cover;
+}
+
+
+.degradado{
+    background: linear-gradient(to bottom, black, grey);
+    transition: 0.2s ease-in-out;
+    width: 100vw;
+    height: 1.2vh;
+    border-radius: 5%;
+}
