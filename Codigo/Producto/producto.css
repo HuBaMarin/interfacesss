@@ -81,11 +81,3 @@ article:nth-of-type(3) {
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
-
-.degradado{
-    background: linear-gradient(to right, black, grey);
-    transition: 0.2s ease-in-out;
-    width: 100vw;
-    height: 0.2vh;
-    border-radius: 5%;
-}

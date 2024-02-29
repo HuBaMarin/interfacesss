@@ -42,37 +42,72 @@ body {
 }
 
 article {
-    position: relative;
-    top: 4rem;
     display: grid;
-    grid-gap: 0.5rem;
-    justify-items: center;
-    grid-template-columns: repeat(3, 1fr);
-    width: 70vw;
-    height: 58vh;
-    
-    margin-left: auto;
-    margin-right: auto;
-
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 4rem;
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    word-wrap: break-word;
+    text-align: justify;
+    color: black;
+    font-weight: bold;
 }
-/*imagen cambio cámara*/
-/*https://wd40.es/tutoriales/como-cambiar-camara-bici/*/
+
 article div {
-    width: 60%;
+    width: 100%;
     height: auto;
 }
 
 article img {
-    width: 100%;
-    height: 15vh;
+    width: 343px;
+    height: 194px;
     object-fit: cover;
+    /*center img*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 
-.degradado{
-    background: linear-gradient(to bottom, black, grey);
-    transition: 0.2s ease-in-out;
-    width: 100vw;
-    height: 1.2vh;
-    border-radius: 5%;
+.linea{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), grey);
+    height: 2px;
+    width: 100%;
+    border-radius: 25px;
+
+
+}
+.wrapper {
+    position: absolute;
+    background: white;
+    width: 343px;
+    height: 8vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+ opacity: 0;
+    transition: opacity 0.5s;
+    /*rounded border*/
+    border-radius: 10px;
+
+}
+
+.wrapper:hover {
+    opacity: 1;
+}
+
+.info {
+    display: block;
+    width: fit-content;
+    height: 8vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.8rem;
+}
+
+div p {
+    text-align: center;
 }

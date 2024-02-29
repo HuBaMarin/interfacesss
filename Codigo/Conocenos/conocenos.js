@@ -29,7 +29,7 @@ class MyButtonGroup extends HTMLElement {
                 border: none;
                 margin: auto;
                 color: black;
-                font-size: x-large;
+                font-size: 20px;
                 font-weight: bold; 
                 
               }
@@ -124,9 +124,8 @@ class MyButtonGroup extends HTMLElement {
                 margin: auto;
                 background:none;
                 border: none;
-                font-size: min(max(1rem, 4vw), 16px);
+                font-size: 20px;
                 font-weight: bold;
-                font-size: x-large;
                  
             }
             
@@ -155,20 +154,20 @@ class MyButtonGroup extends HTMLElement {
                 case 'Politica de privacidad':
 
                     button2.addEventListener('click', () => {
-                        window.location.href = 'privacidad.html';
+                        window.location.href = '../Privacidad/privacidad.html';
                     });
 
                     break;
                 case 'Condiciones de uso':
 
                     button2.addEventListener('click', () => {
-                        window.location.href = 'condiciones.html';
+                        window.location.href = '../Condiciones/condiciones.html';
                     });
 
                     break;
                 case 'Politica de cookies':
                     button2.addEventListener('click', () => {
-                        window.location.href = 'cookies.html';
+                        window.location.href = '../Cookies/Cookies.html';
                     });
                     break;
 

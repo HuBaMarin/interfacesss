@@ -71,11 +71,6 @@ class MyButtonGroup extends HTMLElement {
                     });
 
                     break;
-                case 'Contacto':
-                    button.addEventListener('click', () => {
-                        window.location.href = '../Contacto/contacto.html';
-                    });
-                    break;
                 case 'Conocenos':
                     button.addEventListener('click', () => {
                         window.location.href = '../Conocenos/conocenos.html';
@@ -94,13 +89,10 @@ class MyButtonGroup extends HTMLElement {
             this.shadowRoot.appendChild(button);
 
 
-
-
-
         });
 
-        $(document).ready(function() {
-            $('button').click(function() {
+        $(document).ready(function () {
+            $('button').click(function () {
                 $(this).css('text-decoration', 'underline red');
             });
         });
@@ -153,20 +145,25 @@ class MyButtonGroup extends HTMLElement {
                 case 'Politica de privacidad':
 
                     button2.addEventListener('click', () => {
-                        window.location.href = 'privacidad.html';
+                        window.location.href = '../Privacidad/privacidad.html';
                     });
 
                     break;
                 case 'Condiciones de uso':
 
                     button2.addEventListener('click', () => {
-                        window.location.href = 'condiciones.html';
+                        window.location.href = '../../Codigo/Condiciones/condiciones.html';
                     });
 
                     break;
                 case 'Politica de cookies':
                     button2.addEventListener('click', () => {
-                        window.location.href = 'cookies.html';
+                        window.location.href = '../Cookies/cookies.html';
+                    });
+                    break;
+                case 'Contacto':
+                    button2.addEventListener('click', () => {
+                        window.location.href = '../Contacto/contacto.html';
                     });
                     break;
 
@@ -186,21 +183,55 @@ customElements.define('conjunto-botones', MyButtonGroup);
 
 document.addEventListener('DOMContentLoaded', () => {
 
+
     let envio = document.querySelector("input[type='submit']");
+    let random = "";
+    let informacion = {};
 
     envio.addEventListener('click', (e) => {
         e.preventDefault();
 
-        let informacion = {
-            nombre: document.querySelector("input[id='nombre']").value,
-            apellidos: document.querySelector("input[id='apellidos']").value,
-            email: document.querySelector("input[id='email']").value,
-            mensaje: document.querySelector("textarea[id='mensaje']").value
-        };
-
-        sessionStorage.setItem('informacion', JSON.stringify(informacion));
+        random = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 
 
-    });
+        if (document.querySelector('#nombre').value === "") {
+            document.querySelector("#nombre").style.border = "2px solid red";
+           document.getElementsByClassName("error")[0].style.display = "block";
+            document.getElementsByClassName("error")[0].innerHTML = "El nombre no puede estar vacio";
+            document.getElementsByClassName("error")[0].style.color = "red";
+        } else if (document.querySelector('#apellidos').value === "") {
 
-})
+            document.querySelector("#apellidos").style.border = "2px solid red";
+            document.getElementsByClassName("error")[1].style.display = "block";
+            document.getElementsByClassName("error")[1].innerHTML = "Los apellidos no pueden estar vacios";
+            document.getElementsByClassName("error")[1].style.color = "red";
+
+        } else if (document.querySelector('#email').value === "") {
+            document.querySelector("#email").style.border = "2px solid red";
+            document.getElementsByClassName("error")[2].style.display = "block";
+            document.getElementsByClassName("error")[2].innerHTML = "El email no puede estar vacio";
+            document.getElementsByClassName("error")[2].style.color = "red";
+        } else if (document.querySelector("#mensaje").value === "") {
+
+            document.querySelector("#mensaje").style.border = "2px solid red";
+            document.getElementsByClassName("error")[3].style.display = "block";
+            document.getElementsByClassName("error")[3].innerHTML = "El mensaje no puede estar vacio";
+            document.getElementsByClassName("error")[3].style.color = "red";
+        } else {
+
+            informacion = {
+                id: random,
+                nombre: document.querySelector('#nombre').value,
+                apellidos: document.querySelector('#apellidos').value,
+                email: document.querySelector('#email').value,
+                mensaje: document.querySelector('#mensaje').value
+            };
+            sessionStorage.setItem(random, JSON.stringify(informacion));
+            alert("Enviado con exito");
+            document.querySelector('form').reset();
+
+        }
+
+    })
+
+});

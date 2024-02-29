@@ -71,11 +71,6 @@ class MyButtonGroup extends HTMLElement {
                     });
 
                     break;
-                case 'Contacto':
-                    button.addEventListener('click', () => {
-                        window.location.href = '../Contacto/contacto.html';
-                    });
-                    break;
                 case 'Conocenos':
                     button.addEventListener('click', () => {
                         window.location.href = '../Conocenos/conocenos.html';
@@ -149,20 +144,25 @@ class MyButtonGroup extends HTMLElement {
                 case 'Politica de privacidad':
 
                     button2.addEventListener('click', () => {
-                        window.location.href = 'privacidad.html';
+                        window.location.href = '../Privacidad/privacidad.html';
                     });
 
                     break;
                 case 'Condiciones de uso':
 
                     button2.addEventListener('click', () => {
-                        window.location.href = 'condiciones.html';
+                        window.location.href = '../Condiciones/condiciones.html';
                     });
 
                     break;
                 case 'Politica de cookies':
                     button2.addEventListener('click', () => {
                         window.location.href = 'cookies.html';
+                    });
+                    break;
+                    case 'Contacto':
+                    button2.addEventListener('click', () => {
+                        window.location.href = '../Contacto/contacto.html';
                     });
                     break;
 

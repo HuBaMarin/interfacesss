@@ -39,24 +39,23 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    top:2rem;
 }
 
 /*put form in center, separate elements by 1vw gap and glow animation border on inputs*/
 form {
-    top: 3rem;
     margin: auto;
-    width: 50vw;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
+    height: 65.94202898550725vh;
     word-wrap: break-word;
     text-align: justify;
     color: white;
     font-weight: bold;
-  bottom: 3rem;
+
 }
 
 form input:not([type='submit']) {
@@ -138,12 +137,11 @@ textarea {
     font-size: x-large;
 }
 
-.degradado{
-    position: relative;
-    top: 2rem;
-    background: linear-gradient(to right, black, grey);
-    transition: 0.2s ease-in-out;
-    width: 100vw;
-    height: 1.2vh;
-    border-radius: 5%;
+.linea{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), grey);
+    height: 2px;
+    width: 100%;
+    border-radius: 25px;
+
+
 }
