@@ -13,13 +13,11 @@ $(document).ready(function () {
 
         if (username === "" || password === "" || email === "") {
             $("#repassword").after("<span class='error'>Todos los campos son obligatorios</span>");
-            $(".error").text("Todos los campos son obligatorios");
             return;
         }
 
         if (password !== repeatPassword) {
             $("#repassword").after("<span class='error'>Las contraseñas no coinciden</span>");
-            $(".error").text("Las contraseñas no coinciden");
             return;
 
         }
@@ -33,7 +31,7 @@ $(document).ready(function () {
         /*Comprobar si el usuario ya existe*/
         for (let i = 0; i < usuarios.length; i++) {
             if (username === usuarios[i].username) {
-                $(".error").text("El usuario ya existe");
+                $("#username").after("<span class='error'>El usuario ya existe</span>");
                 return;
             }
         }

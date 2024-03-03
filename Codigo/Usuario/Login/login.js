@@ -4,15 +4,19 @@
  */
 $(document).ready(function () {
     /*check if user and passoword are in sessionStorage*/
-    if (sessionStorage.getItem("username") && sessionStorage.getItem("password")) {
-        $("#usuario").val(sessionStorage.getItem("username"));
-        $("#password").val(sessionStorage.getItem("password"));
-
-        let div = document.createElement("div");
-        div.innerHTML = "Bienvenido " + sessionStorage.getItem("username");
-        document.body.appendChild(div);
 
 
+    let arrayUsuarios = JSON.parse(sessionStorage.getItem("usuarios"));
 
+    let usuarioSesion = arrayUsuarios[0].username;
+    let passwordSesion = arrayUsuarios[0].password;
+
+
+
+    let usuario = $("#usuario").val();
+    let password = $("#password").val();
+    if (usuario === usuarioSesion && password === passwordSesion) {
+        window.location.href = "../../Inicio/inicio.html";
     }
+
 })

@@ -180,3 +180,8 @@ class MyButtonGroup extends HTMLElement {
 
 customElements.define('conjunto-botones', MyButtonGroup);
 
+$(document).ready(function () {
+    /*Recoger el usuario del sessionStorage y mostrarlo al lado del nav del html */
+    let arrayUsuarios = JSON.parse(sessionStorage.getItem("usuarios"));
+    document.getElementById("user").innerHTML = arrayUsuarios[0].username;
+});

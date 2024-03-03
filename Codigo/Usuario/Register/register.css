@@ -1,4 +1,19 @@
 /*
+ * Estilos generales
+ */
+@font-face {
+    font-family: 'Helvetica';
+    src: local('Helvetica'), url('../../Fuentes/Helvetica.woff') format('woff');
+}
+
+* {
+    color: black;
+    font-family: Helvetica;
+    font-size: 16px;
+}
+
+
+/*
  * Estilos del registro
  */
 
