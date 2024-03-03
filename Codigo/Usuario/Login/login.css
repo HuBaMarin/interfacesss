@@ -6,7 +6,7 @@
  */
 @font-face {
     font-family: 'Helvetica';
-    src: local('Helvetica'), url('Codigo/Fuentes/Helvetica.woff') format('woff');
+    src: local('Helvetica'), url('../../Fuentes/Helvetica.woff') format('woff');
 }
 
 body {

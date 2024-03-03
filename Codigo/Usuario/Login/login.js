@@ -8,7 +8,10 @@ $(document).ready(function () {
         $("#usuario").val(sessionStorage.getItem("username"));
         $("#password").val(sessionStorage.getItem("password"));
 
-        $("div").html("Bienvenido " + sessionStorage.getItem("username"));
+        let div = document.createElement("div");
+        div.innerHTML = "Bienvenido " + sessionStorage.getItem("username");
+        document.body.appendChild(div);
+
 
 
     }
