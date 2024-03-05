@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Inicio</title>
@@ -8,6 +9,10 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
+
+    <span>
+        <img src="../Imagenes/Usuario/Icono/Icono_neg.svg" alt="icono bicicleta">
+    </span>
 
         <conjunto-botones id="nav"></conjunto-botones>
         <p class="linea"></p>
@@ -34,7 +39,6 @@
         <p class="linea"></p>
         <conjunto-botones id="footerpag"></conjunto-botones>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
 
             const navegacion = document.getElementById('nav');
@@ -43,6 +47,8 @@
 
             navegacion.setButtons1(['Inicio', 'Blog', 'Conocenos','Catalogo']);
             footerpag.setButtons2(['Politica de privacidad', 'Condiciones de uso', 'Politica de cookies', 'Contacto']);
+
+
 
 
 

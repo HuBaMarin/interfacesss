@@ -6,7 +6,7 @@
  */
 @font-face {
     font-family: 'Helvetica';
-    src: local('Helvetica'), url('../../Fuentes/Helvetica.woff') format('woff');
+    src: local('Helvetica'), url('../Fuentes/Helvetica.woff') format('woff');
 }
 
 body {
@@ -65,4 +65,13 @@ form > input[type="password"] {
 
 label {
     text-align: center;
+}
+
+/**
+Icono de usuario
+*/
+span img {
+    width: 5rem;
+    height: 5rem;
+    margin-left: 4rem;
 }

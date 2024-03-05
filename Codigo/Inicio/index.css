@@ -2,15 +2,17 @@
     font-family: 'Helvetica';
     src: local('Helvetica'), url('../Fuentes/Helvetica.woff') format('woff');
 }
- *{
-    font-family:'Helvetica'
- }
+
+* {
+    font-family: 'Helvetica'
+}
 
 body {
     background-color: white;
 }
+
 #nav {
-   /*center nav center elements and a gap 3 between them*/
+    /*center nav center elements and a gap 3 between them*/
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -23,22 +25,21 @@ body {
     left: 0;
     right: 0;
 
-    
-   
+
 }
 
 #footerpag {
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: center;
-   height: 10vh;
-   width: 30vw;
-   margin: auto;
-   position: relative;
-   bottom: 0;
-   left: 0;
-   right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    width: 30vw;
+    margin: auto;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
 }
 
@@ -62,7 +63,7 @@ body {
 }
 
 
-.linea{
+.linea {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), grey);
     height: 2px;
     width: 100%;
@@ -70,3 +71,44 @@ body {
 
 
 }
+
+/**
+Icono de usuario
+*/
+span img {
+    width: 5rem;
+    height: 5rem;
+    margin-left: 4rem;
+}
+
+/*
+Estilos usuario
+*/
+.user img {
+    width: 6vw;
+    height: 6vh;
+    margin-left: 4rem;
+    display: flex;
+    bottom: 31rem;
+    left: 54rem;
+    position: relative;
+}
+
+.user {
+    width: 6vw;
+    height: 6vh;
+    margin-left: 4rem;
+    display: flex;
+    bottom: 31rem;
+    left: 54rem;
+    position: relative;
+}
+
+.user p{
+ width: 5rem;
+ height: 5rem;
+    position: relative;
+    bottom: 31rem;
+    left: 60rem;
+}
+
